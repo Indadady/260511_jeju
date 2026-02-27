@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 🚨 Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLH9GD9SVR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JLH9GD9SVR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🌟 카카오톡/SNS 공유 시 보여질 썸네일 설정 (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2026 강원랜드 사회공헌재단 진폐휴양프로그램">
+    <meta property="og:description" content="휴양의 쉼과 위로. 어르신들의 편안하고 즐거운 3박 4일 제주 힐링 여행에 초대합니다.">
+    <!-- 웹페이지 내 이미지 URL 사용 원칙 적용 -->
+    <meta property="og:image" content="https://images.openai.com/static-rsc-3/aI1RA1vTnXxN4nZjDYV1TlzXy2_HGsJa67gE12lrQen-cGGATfz_2vaOAWgkooxKhUmsKiJbpf2jM3HfCjHxEbgsR-3pHPAoy1dNNZFEgAw?purpose=fullsize&v=1">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <title>2026 강원랜드 진폐휴양프로그램 스마트 가이드북</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Nanum+Myeongjo:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .font-serif { font-family: 'Nanum Myeongjo', serif; }
+        
+        /* Hero Background - 힐링 테마의 제주 풍경 */
+        .hero-bg-jeju { 
+            background: linear-gradient(rgba(0, 30, 20, 0.5), rgba(0, 40, 30, 0.6)), url('https://images.openai.com/static-rsc-3/aI1RA1vTnXxN4nZjDYV1TlzXy2_HGsJa67gE12lrQen-cGGATfz_2vaOAWgkooxKhUmsKiJbpf2jM3HfCjHxEbgsR-3pHPAoy1dNNZFEgAw?purpose=fullsize&v=1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        } 
+        
+        /* Interactive Elements */
+        .nav-link { transition: all 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #059669; border-bottom-color: #059669; }
+        
+        .tab-btn { transition: all 0.3s; }
+        .tab-btn.active { background-color: #047857; color: white; border-color: #047857; }
+        
+        /* Play Button Overlay */
+        .play-overlay { background: rgba(0, 0, 0, 0.4); transition: all 0.3s; }
+        .group:hover .play-overlay { background: rgba(0, 0, 0, 0.2); }
+        .play-icon { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .group:hover .play-icon { transform: scale(1.2); }
+
+        /* Timeline Styling */
+        .timeline-item::before { 
+            content: ''; position: absolute; left: -32px; top: 0; bottom: 0; width: 2px; background-color: #e2e8f0; 
+        }
+        .timeline-item:first-child::before { top: 20px; }
+        .timeline-item:last-child::before { bottom: auto; height: 20px; }
+
+        /* Notepad Style */
+        .notepad {
+            background-color: #fef9c3; background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 100% 2rem; line-height: 2rem; border-left: 4px solid #f59e0b;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+        .notepad:focus { outline: none; background-color: #fef08a; }
+        
+        /* System Message Block (과업 요구사항 준수 포맷) */
+        .system-powered {
+            background-color: #f8f9fa; padding: 15px; text-align: center; font-size: 13px;
+            color: #6c757d; border-top: 1px solid #e9ecef; width: 100%;
+        }
+
+        /* 🖨️ A4 한장 표 양식 인쇄 전용 CSS (@media print) */
+        @media print {
+            @page { size: A4 portrait; margin: 10mm; }
+            body { background: #fff; color: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            header, main, footer, .system-powered { display: none !important; }
+            #print-section { display: block !important; }
+            .print-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 9.5pt; }
+            .print-table th, .print-table td { border: 1px solid #000; padding: 6px; }
+            .print-table th { background-color: #e2e8f0 !important; font-weight: bold; text-align: center; }
+            .print-table td.center { text-align: center; }
+            .print-table td.bold { font-weight: bold; }
+            .print-table ul { margin: 0; padding-left: 15px; }
+            .print-table li { margin-bottom: 2px; }
+            .highlight-text { font-weight: bold; color: #047857 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo & D-Day -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <a href="http://tourmaker.kr" target="_blank">
+                        <!-- 투어메이커 로고 무조건 삽입 규칙 반영 -->
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker Logo" class="h-8 w-auto">
+                    </a>
+                    <div id="d-day-badge" class="bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-pulse">
+                        Calculating...
+                    </div>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 text-sm font-medium">
+                        <a href="#home"        class="nav-link px-3 py-2 border-b-2 border-transparent active">메인</a>
+                        <a href="#welcome"     class="nav-link px-3 py-2 border-b-2 border-transparent">모시는 글</a>
+                        <a href="#highlight"   class="nav-link px-3 py-2 border-b-2 border-transparent">케어/특징</a>
+                        <a href="#hotel"       class="nav-link px-3 py-2 border-b-2 border-transparent text-emerald-700 font-bold">프리미엄 숙소</a>
+                        <a href="#timeline"    class="nav-link px-3 py-2 border-b-2 border-transparent">상세 일정표</a>
+                        <a href="#mynote"      class="nav-link px-3 py-2 border-b-2 border-transparent text-amber-600 font-bold"><i class="fa-solid fa-pen-to-square"></i> 메모/준비물</a>
+                    </div>
+                </div>
+
+                 <!-- Mobile Menu Button -->
+                 <div class="md:hidden">
+                    <a href="#timeline" class="text-emerald-700 font-bold text-sm mr-3">일정표</a>
+                    <a href="#mynote" class="text-amber-600 font-bold text-sm"><i class="fa-solid fa-pen-to-square"></i> 메모</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Secondary Nav -->
+        <div class="md:hidden overflow-x-auto whitespace-nowrap bg-slate-50 border-b border-slate-200">
+            <div class="flex px-4 py-2 space-x-4 text-xs font-medium text-slate-600">
+                <a href="#highlight" class="block">특징</a>
+                <a href="#hotel" class="block text-emerald-700 font-bold">숙소</a>
+                <a href="#timeline" class="block">전체일정</a>
+                <a href="#pretravel" class="block text-red-600 font-bold">안전/출발</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg-jeju text-white text-center flex items-center justify-center min-h-[85vh] relative">
+            <div class="container mx-auto px-4 z-10">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-4 border border-white/30">
+                    <span class="text-sm md:text-base font-bold text-emerald-300 tracking-wider">KANGWON LAND 강원랜드 사회공헌재단</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl md:leading-tight font-black mb-6 leading-tight drop-shadow-xl font-serif">
+                    2026년 진폐휴양프로그램<br>제주 3박 4일 힐링 투어
+                </h1>
+                
+                <div class="mt-6 max-w-2xl mx-auto bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                    <p class="text-lg md:text-xl text-slate-100 leading-relaxed font-light">
+                        "휴양의 쉼과 위로로 진폐재해자 삶의 긍정적 전환에 이바지합니다."<br>
+                        <span class="text-yellow-400 font-bold">전 일정 전문 간호사 동행</span>과 <span class="text-yellow-400 font-bold">노계단/무경사 안심 코스</span>로<br>
+                        어르신들께 가장 편안하고 안전한 제주를 선물합니다.
+                    </p>
+                </div>
+                
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 text-base font-bold">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg flex items-center justify-center">
+                        <i class="fa-regular fa-calendar-check mr-2 text-emerald-400"></i>
+                        <span>1차: 05.11(월)~05.14(목)<br>2차: 05.18(월)~05.21(목)</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg flex flex-col justify-center">
+                        <div><i class="fa-solid fa-users mr-2 text-emerald-400"></i>대상: 진폐재해자 및 인솔자</div>
+                        <div class="text-sm font-normal text-slate-300 mt-1">(투어메이커 전담 가이드 & 간호사 동행)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome Message -->
+        <section id="welcome" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <span class="text-emerald-700 font-bold tracking-wider text-sm uppercase">Message of Consolation</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-6">어르신 여러분, 그동안 정말 고생 많으셨습니다.</h2>
+                    <p class="text-slate-600 leading-8 text-lg break-keep">
+                        대한민국의 산업 발전을 위해 깊고 어두운 막장에서 흘리신 어르신들의 땀방울을 기억합니다.<br>
+                        강원랜드 사회공헌재단과 주관사 투어메이커는 어르신들의 노고에 조금이나마 보답하고자, 제주의 푸른 바다와 맑은 공기를 마음껏 누리실 수 있는 특별한 휴양 프로그램을 준비했습니다.<br><br>
+                        이번 여행은 <strong>어르신들의 연세를 고려하여 걷기 힘들거나 경사가 심한 곳은 철저히 배제</strong>하였으며, <strong>경력 간호사가 3박 4일 전 일정을 함께하며</strong> 건강을 세심히 살피겠습니다. 따뜻한 제주의 봄날, 편안한 쉼과 맛있는 음식으로 몸과 마음을 온전히 치유하는 시간이 되시기를 진심으로 기원합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section id="highlight" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">맞춤형 케어 3대 핵심 포인트</h2>
+                    <p class="text-slate-500 mt-2">안전과 편안함을 최우선으로 설계한 진폐재해자 전용 프로그램</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Point 1: Safety First -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-48 bg-slate-200 relative overflow-hidden flex items-center justify-center bg-emerald-50">
+                            <i class="fa-solid fa-kit-medical text-6xl text-emerald-600"></i>
+                            <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">안전 최우선</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-slate-900">전 일정 간호사 동행 & 상비약 구비</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                공항 이동 버스 탑승부터 제주 여행 전 일정에 <strong>임상 경력 1년 이상의 전문 간호사가 동행</strong>합니다. 어르신들의 호흡기 및 건강 상태를 수시로 체크하며 구급약품을 항시 소지하여 응급 상황에 철저히 대비합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 2: No Stairs / Easy Tour -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group hover:-translate-y-2 transition-transform duration-300">
+                         <div class="h-48 bg-slate-200 relative overflow-hidden flex items-center justify-center bg-blue-50">
+                            <i class="fa-solid fa-wheelchair-move text-6xl text-blue-600"></i>
+                            <div class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">무장애 동선</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-slate-900">계단/경사로 NO, 관람 중심 일정</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                평균 연령 75세 이상의 어르신들을 위해 <strong>요트 투어, 난타공연(아이바가든), 스카이워터쇼</strong> 등 앉아서 즐기는 관람 위주로 코스를 짰습니다. 에코랜드와 돌문화공원에서는 기차와 전기차에 탑승해 편안하게 자연을 감상합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Point 3: Premium Care (Snacks & Food) -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="h-48 bg-slate-200 relative overflow-hidden flex items-center justify-center bg-orange-50">
+                            <i class="fa-solid fa-utensils text-6xl text-orange-500"></i>
+                            <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">미식 & 영양</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-slate-900">매일 제공되는 맞춤 영양 간식</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                매일 식수(500ml)와 함께 제주 특산물로 구성된 간식 꾸러미(오메기떡, 감귤착즙주스, 우도땅콩아이스크림, 오설록녹차 등)를 제공해 드립니다. 식사 역시 <strong>제주 흑돼지, 회정식 특식, 해물전골</strong> 등 영양가 높은 식단으로 준비했습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 제주 힐링 영상 (관광청 공식 유튜브 활용) -->
+                <div class="mt-16 max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="relative aspect-video group cursor-pointer" onclick="playVideo(this, 'pNflw8gEAoU')">
+                        <img src="https://img.youtube.com/vi/pNflw8gEAoU/hqdefault.jpg" alt="Beautiful Jeju" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center play-overlay">
+                            <div class="text-center">
+                                <i class="fa-solid fa-play text-white text-6xl play-icon mb-4 block"></i>
+                                <span class="text-white font-bold text-lg tracking-wider">제주 힐링 풍경 미리보기 (제주관광청)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotel Section -->
+        <section id="hotel" class="py-20 bg-white border-t border-slate-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">전 일정 4성급 이상 프리미엄 숙소</h2>
+                    <p class="text-slate-500 mt-2">어르신들의 편안한 수면을 위해 2인 1실 트윈베드 배정을 원칙으로 합니다.</p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center mb-16">
+                    <div class="md:w-1/2">
+                        <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold mb-4">1일차 ~ 2일차 숙박 (서귀포)</div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">더그랜드섬오름 호텔</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            제주 남쪽 바다가 한눈에 들어오는 서귀포의 고급 4성급 호텔입니다. 전 인원을 수용할 수 있는 넉넉한 규모와 안전 시설을 갖추고 있으며, 주요 관광지와의 동선이 짧아 이동 피로를 최소화합니다.
+                        </p>
+                        <ul class="text-sm text-slate-700 space-y-3 font-medium">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 전 객실 2인 1실 (트윈베드 기준) 배정</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 홀수 인원 발생 시 1인 1실 배정 배려</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 깔끔하고 위생적인 뷔페식 조식 제공</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/448006007.jpg?k=552bb6b438162ae415dbf48eac7d67d61c90f2a4e901d617efe96d256f051ef5&o=" alt="더그랜드섬오름" class="w-full h-64 object-cover rounded-xl shadow-lg border border-slate-200">
+                    </div>
+                </div>
+
+                <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <div class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold mb-4">3일차 숙박 (제주시)</div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">호텔 리젠트마린</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            여행 마지막 날, 공항 이동이 편리한 제주시 탑동 해안가에 위치한 4성급 호텔입니다. 주변 경관이 뛰어나며 평탄한 해변 산책로가 있어 어르신들께서 아침 저녁으로 가볍게 바닷바람을 쐬시기에 아주 좋습니다.
+                        </p>
+                        <ul class="text-sm text-slate-700 space-y-3 font-medium">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 영업배상 및 화재보험 가입 완료된 안전한 숙소</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 제주 공항과 가까워 마지막 날 일정에 최적화</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-emerald-500 mr-2"></i> 인솔자 및 간호사 즉각 대응 가능한 동선 배치</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.trvl-media.com/lodging/14000000/13370000/13364300/13364220/f059de31.jpg?impolicy=resizecrop&ra=fill&rh=575&rw=575" alt="리젠트마린" class="w-full h-64 object-cover rounded-xl shadow-lg border border-slate-200">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary Section (웹용 탭 형식) -->
+        <section id="timeline" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                
+                <!-- 상단 타이틀 및 인쇄 버튼 영역 -->
+                <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between mb-8 px-2">
+                    <div class="hidden md:block w-1/3"></div>
+                    <h2 class="text-3xl font-bold text-center w-full md:w-1/3 mb-4 md:mb-0">3박 4일 상세 일정표</h2>
+                    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+                        <button onclick="window.print()" class="print-btn bg-slate-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-lg hover:bg-slate-700 transition-all flex items-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-print"></i> 과업지시서 기반 A4 인쇄
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Tab Navigation -->
+                <div class="max-w-5xl mx-auto flex mb-8 bg-white rounded-lg p-1 shadow-sm overflow-x-auto">
+                    <button class="tab-btn active flex-1 min-w-[100px] py-3 rounded-md font-bold text-sm md:text-base whitespace-nowrap" onclick="showTab('day1', this)">1일차 (월)</button>
+                    <button class="tab-btn flex-1 min-w-[100px] py-3 rounded-md font-bold text-sm md:text-base text-slate-500 hover:text-slate-700 whitespace-nowrap" onclick="showTab('day2', this)">2일차 (화)</button>
+                    <button class="tab-btn flex-1 min-w-[100px] py-3 rounded-md font-bold text-sm md:text-base text-slate-500 hover:text-slate-700 whitespace-nowrap" onclick="showTab('day3', this)">3일차 (수)</button>
+                    <button class="tab-btn flex-1 min-w-[100px] py-3 rounded-md font-bold text-sm md:text-base text-slate-500 hover:text-slate-700 whitespace-nowrap" onclick="showTab('day4', this)">4일차 (목)</button>
+                </div>
+
+                <!-- Timeline Content -->
+                <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-10 min-h-[500px]">
+                    
+                    <!-- DAY 1 -->
+                    <div id="day1" class="schedule-content">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-slate-800 flex items-center">
+                                <span class="bg-emerald-600 text-white text-sm px-3 py-1 rounded-full mr-3">DAY 1</span>
+                                제주로의 첫 걸음
+                            </h3>
+                            <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded border border-yellow-300">
+                                🎁 오늘의 간식: 아침간식(김밥/빵), 오메기떡, 감귤착즙주스
+                            </div>
+                        </div>
+                        <div class="relative pl-8 space-y-8">
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">오전 일정</span>
+                                <h4 class="text-lg font-bold text-slate-800">탑승지 집결 및 공항 이동</h4>
+                                <p class="text-slate-500 text-sm mt-1">태백 출발 (정선/영월/삼척 등 경유) 전용 버스 탑승.<br>간호사가 동승하여 건강상태 체크 및 멀미약 등 구급약 비치 완료.</p>
+                                <p class="text-xs text-blue-600 font-bold mt-1">조식: 박달재휴게소 (또는 이동 중 식당)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-blue-500 w-5 h-5 rounded-full"></div>
+                                <span class="text-blue-600 font-bold text-sm block mb-1">11:00 시대</span>
+                                <h4 class="text-lg font-bold text-slate-800">원주공항 (또는 청주/광주) 출발</h4>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">13:00~15:00</span>
+                                <h4 class="text-lg font-bold text-slate-800">제주공항 도착 및 전용버스 미팅</h4>
+                                <p class="text-slate-500 text-sm mt-1">최신형 40인승 리무진 급 차량 (안전벨트 확인)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">중식</span>
+                                <h4 class="text-lg font-bold text-slate-800">돌솥밥 + 성게미역국</h4>
+                                <p class="text-slate-500 text-sm">소화가 잘되는 따뜻하고 시원한 제주식 미역국 반상</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-purple-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-purple-600 font-bold text-sm block mb-1">오후 관광 (실내 관람형)</span>
+                                <h4 class="text-lg font-bold text-slate-800">아이바가든 (난타공연) & 더마파크 (16시 공연)</h4>
+                                <p class="text-slate-500 text-sm">다리 아프게 걷지 않고 편안히 앉아서 즐기는 신나는 타악 공연과 화려한 말타기 기예쇼 관람</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">석식</span>
+                                <h4 class="text-lg font-bold text-slate-800">월드컵 흑돼지</h4>
+                                <p class="text-slate-500 text-sm">제주에 오면 꼭 맛보셔야 할 부드러운 흑돼지 만찬 (식음료 지원 포함)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-slate-800 border-4 border-slate-800 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-600 font-bold text-sm block mb-1">숙박</span>
+                                <h4 class="text-lg font-bold text-slate-800">더그랜드섬오름 호텔 (4성급) 체크인</h4>
+                                <p class="text-slate-500 text-sm">서귀포의 맑은 공기를 마시며 첫날밤의 쾌적한 휴식 (2인 1실)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 2 -->
+                    <div id="day2" class="schedule-content hidden">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-slate-800 flex items-center">
+                                <span class="bg-emerald-600 text-white text-sm px-3 py-1 rounded-full mr-3">DAY 2</span>
+                                제주 바다와 자연의 품
+                            </h3>
+                            <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded border border-yellow-300">
+                                🎁 오늘의 간식: 녹차아이스크림(오설록), 보리빵
+                            </div>
+                        </div>
+                        <div class="relative pl-8 space-y-8">
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">조식</span>
+                                <h4 class="text-lg font-bold text-slate-800">호텔 뷔페식</h4>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-blue-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-blue-600 font-bold text-sm block mb-1">오전 관광</span>
+                                <h4 class="text-lg font-bold text-slate-800">럭셔리 요트 투어 & 오설록 티뮤지엄</h4>
+                                <p class="text-slate-500 text-sm">흔들림 적은 대형 요트에서 즐기는 제주 바다 절경, 그리고 싱그러운 녹차밭 산책</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">중식</span>
+                                <h4 class="text-lg font-bold text-slate-800">고기국수 + 돔베고기</h4>
+                                <p class="text-slate-500 text-sm">담백하고 진한 육수의 제주 전통 국수와 부드러운 돼지고기 수육 (오설록 인근 추천 식당)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-green-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-green-600 font-bold text-sm block mb-1">오후 관광</span>
+                                <h4 class="text-lg font-bold text-slate-800">휴애리 자연생활공원 & 올레시장</h4>
+                                <p class="text-slate-500 text-sm">계절꽃이 가득한 평탄한 공원 산책 후, 활기찬 전통시장 구경. (중간 휴식: 더클리프 전망 카페)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">석식 [특식]</span>
+                                <h4 class="text-lg font-bold text-slate-800">동해미락 (고급 회정식)</h4>
+                                <p class="text-slate-500 text-sm">신선한 제주 해산물이 상다리 부러지게 차려지는 특별한 저녁 만찬</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-slate-800 border-4 border-slate-800 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-600 font-bold text-sm block mb-1">숙박</span>
+                                <h4 class="text-lg font-bold text-slate-800">더그랜드섬오름 호텔 연박</h4>
+                                <p class="text-slate-500 text-sm">짐을 싸고 푸는 번거로움 없이 편안한 두 번째 밤</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 3 -->
+                    <div id="day3" class="schedule-content hidden">
+                         <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-slate-800 flex items-center">
+                                <span class="bg-emerald-600 text-white text-sm px-3 py-1 rounded-full mr-3">DAY 3</span>
+                                신비의 섬 우도와 숲속 힐링
+                            </h3>
+                            <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded border border-yellow-300">
+                                🎁 오늘의 간식: 땅콩아이스크림(우도), 우도 땅콩샌드
+                            </div>
+                        </div>
+                        <div class="relative pl-8 space-y-8">
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">조식</span>
+                                <h4 class="text-lg font-bold text-slate-800">호텔 뷔페식</h4>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-blue-500 w-5 h-5 rounded-full"></div>
+                                <span class="text-blue-600 font-bold text-sm block mb-1">오전 관광</span>
+                                <h4 class="text-lg font-bold text-slate-800">우도 해양 도립공원 투어</h4>
+                                <p class="text-slate-500 text-sm">성산항에서 배를 타고 우도로 이동하여 섬 속의 섬이 주는 아름다운 경관 감상 (현지 버스 투어)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">중식</span>
+                                <h4 class="text-lg font-bold text-slate-800">성산 갈치맛집 (해물전골)</h4>
+                                <p class="text-slate-500 text-sm">푸짐한 해산물로 끓여낸 시원하고 얼큰한 해물전골</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-purple-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-purple-600 font-bold text-sm block mb-1">오후 관광</span>
+                                <h4 class="text-lg font-bold text-slate-800">스카이워터쇼 & 에코랜드 기차여행</h4>
+                                <p class="text-slate-500 text-sm">시원한 물줄기 속 기예단 공연 관람 후, 곶자왈 원시림을 달리는 낭만적인 궤도 열차 탑승</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-red-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-red-500 font-bold text-sm block mb-1">피로 회복</span>
+                                <h4 class="text-lg font-bold text-slate-800">한라수목원 인근 족욕 체험</h4>
+                                <p class="text-slate-500 text-sm">따뜻한 물에 발을 담그고 여행의 피로를 사르르 녹이는 시간</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">석식</span>
+                                <h4 class="text-lg font-bold text-slate-800">화목원 (화목원정식 + 갈치조림)</h4>
+                                <p class="text-slate-500 text-sm">깔끔하게 차려지는 한정식과 매콤달달한 제주 갈치조림</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-slate-800 border-4 border-slate-800 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-600 font-bold text-sm block mb-1">숙박</span>
+                                <h4 class="text-lg font-bold text-slate-800">호텔 리젠트마린 (4성급) 체크인</h4>
+                                <p class="text-slate-500 text-sm">공항과 가까운 제주시내 호텔에서 마지막 밤의 아쉬움을 달랩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY 4 -->
+                    <div id="day4" class="schedule-content hidden">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-slate-800 flex items-center">
+                                <span class="bg-emerald-600 text-white text-sm px-3 py-1 rounded-full mr-3">DAY 4</span>
+                                일상으로 돌아가는 길
+                            </h3>
+                            <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded border border-yellow-300">
+                                🎁 오늘의 간식: 감귤 타르트, 감귤과즐
+                            </div>
+                        </div>
+                        <div class="relative pl-8 space-y-8">
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">조식</span>
+                                <h4 class="text-lg font-bold text-slate-800">호텔 뷔페식</h4>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-green-500 w-5 h-5 rounded-full"></div>
+                                <span class="text-green-600 font-bold text-sm block mb-1">오전 관광 & 쇼핑</span>
+                                <h4 class="text-lg font-bold text-slate-800">제주 돌문화공원 (전기차) & 특산품 쇼핑</h4>
+                                <p class="text-slate-500 text-sm">거대한 제주의 신화와 돌을 '전기차'에 탑승하여 편안하게 돌아보고, 손주들에게 줄 선물을 구입합니다.</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-blue-500 w-5 h-5 rounded-full"></div>
+                                <span class="text-blue-600 font-bold text-sm block mb-1">13:00~15:00 시대</span>
+                                <h4 class="text-lg font-bold text-slate-800">제주공항 수속 및 출발</h4>
+                                <p class="text-slate-500 text-sm">아쉬움을 뒤로하고 탑승 (간호사 및 가이드 끝까지 케어)</p>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-slate-300 w-5 h-5 rounded-full"></div>
+                                <span class="text-slate-500 font-bold text-sm block mb-1">오후</span>
+                                <h4 class="text-lg font-bold text-slate-800">원주공항 (또는 지정공항) 도착</h4>
+                            </div>
+                            <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-orange-400 w-5 h-5 rounded-full"></div>
+                                <span class="text-orange-500 font-bold text-sm block mb-1">석식</span>
+                                <h4 class="text-lg font-bold text-slate-800">치악 기사식당 (한정식)</h4>
+                                <p class="text-slate-500 text-sm">자택으로 돌아가시기 전 든든하게 속을 채우는 따뜻한 백반.</p>
+                            </div>
+                             <div class="timeline-item relative">
+                                <div class="absolute -left-[41px] bg-white border-4 border-emerald-500 w-5 h-5 rounded-full"></div>
+                                <span class="text-emerald-600 font-bold text-sm block mb-1">저녁</span>
+                                <h4 class="text-lg font-bold text-slate-800">태백 등 각 목적지 도착 및 해산</h4>
+                                <p class="text-slate-500 text-sm">어르신들 모두 건강히 안녕히 가십시오. 수고 많으셨습니다!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pre-Travel & Meeting Info -->
+        <section id="pretravel" class="py-20 bg-emerald-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">안전한 여행을 위한 준비물</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Checklist -->
+                        <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-emerald-500">
+                            <h3 class="text-lg font-bold mb-4 flex items-center"><i class="fa-solid fa-clipboard-check text-emerald-600 mr-2"></i> 필수 지참물 체크리스트</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center space-x-3 p-3 bg-slate-50 rounded-lg hover:bg-slate-100 cursor-pointer border-l-4 border-red-500">
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-emerald-600 rounded">
+                                    <span class="text-slate-800 font-bold text-lg">신분증 (주민등록증 필수, 미지참시 비행기 탑승 불가)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3 bg-slate-50 rounded-lg hover:bg-slate-100 cursor-pointer border-l-4 border-red-500">
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-emerald-600 rounded">
+                                    <span class="text-slate-800 font-bold">진폐재해자 관련 복용 중인 처방약 (호흡기/혈압 등)</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3 bg-slate-50 rounded-lg hover:bg-slate-100 cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-emerald-600 rounded">
+                                    <span class="text-slate-700">발이 가장 편안한 운동화 및 여벌 옷</span>
+                                </label>
+                                <label class="flex items-center space-x-3 p-3 bg-slate-50 rounded-lg hover:bg-slate-100 cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox h-5 w-5 text-emerald-600 rounded">
+                                    <span class="text-slate-700">개인 세면도구 (칫솔/면도기 - 호텔 내 환경규제로 미제공)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Contact Info -->
+                         <div class="bg-white p-6 rounded-2xl shadow-md border-2 border-yellow-400">
+                            <h3 class="text-lg font-bold mb-4 flex items-center"><i class="fa-solid fa-phone-volume text-yellow-600 mr-2"></i> 비상 연락망 (24시간 대기)</h3>
+                            <div class="space-y-4">
+                                <div class="text-center pt-2">
+                                    <p class="text-sm text-slate-500 mb-1">행사 주최</p>
+                                    <p class="text-xl font-bold text-slate-800 mb-4">강원랜드 사회공헌재단</p>
+                                    
+                                    <div class="h-px bg-slate-200 w-full my-4"></div>
+
+                                    <p class="text-sm text-slate-500 mt-4 mb-1">진행 총괄 대행사 (투어메이커)</p>
+                                    <p class="text-lg font-bold text-slate-800">투어메이커 이재명 대표</p>
+                                    <p class="text-slate-600 mt-1"><a href="tel:010-9443-7881" class="hover:text-emerald-600 font-bold text-lg">010-9443-7881</a></p>
+                                    <p class="text-xs text-slate-400 mt-2">* 전 일정 간호사 및 전담 인솔자가 항시 근거리에 대기합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Note Section -->
+        <section id="mynote" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">어르신 스마트 메모장</h2>
+                    <p class="text-center text-slate-500 mb-6">가족들 선물 리스트나 일정 중 궁금한 점을 적어두시면 지워지지 않습니다.</p>
+                    <div class="relative">
+                        <textarea id="travel-memo" class="notepad w-full h-80 p-8 text-lg text-slate-700 resize-none rounded-xl" placeholder="여기에 자유롭게 터치하여 메모를 남겨보세요..."></textarea>
+                        <div id="save-status" class="absolute bottom-4 right-6 text-sm text-slate-400">자동 저장 대기중...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6 flex justify-center items-center gap-4">
+                <!-- 투어메이커 로고 무조건 삽입 규칙 반영 -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker Logo" class="h-10 opacity-90">
+            </div>
+            <p class="mb-2 font-medium text-slate-300">투어메이커는 진폐재해자 어르신들의 완벽하고 안전한 휴양을 책임집니다.</p>
+            
+            <!-- 투어메이커 홈페이지 바로가기 박스 버튼 (지시사항 반영) -->
+            <a href="http://tourmaker.kr" target="_blank" class="inline-block bg-slate-800 text-slate-300 px-6 py-3 rounded-lg font-medium hover:bg-slate-700 hover:text-white transition-colors border border-slate-700 mt-4 mb-6">
+                <i class="fa-solid fa-globe mr-2"></i> 투어메이커 홈페이지 바로가기
+            </a>
+
+            <p class="text-sm text-slate-600 mb-6">&copy; 2026 Tourmaker. All Rights Reserved.</p>
+        </div>
+        
+        <!-- System Powered By Message (2026-02-08 규칙 완벽 반영) -->
+        <div class="system-powered">
+            [System Powered by TOURMAKER] 본 스마트 가이드북은 **투어메이커**의 기획과 <a href="http://tourmaker.kr" target="_blank" style="text-decoration: underline; font-weight: bold; color: #6c757d;">투어메이커</a>의 트래블 테크 기술 제휴로 제작되었습니다.
+        </div>
+    </footer>
+
+    <!-- 🖨️ 인쇄 전용 영역 (A4 한 장 표 양식) -->
+    <div id="print-section" style="display: none;">
+        <div style="text-align: center; margin-bottom: 15px;">
+            <h1 style="font-size: 18pt; margin: 0; padding: 0; font-weight: bold; color: #000;">2026년 진폐휴양프로그램 대행 용역 일정표 (투어메이커 제안)</h1>
+            <p style="font-size: 9pt; margin: 5px 0 0 0; color: #333;">
+                [1차] 05.11(월)~14(목) / [2차] 05.18(월)~21(목) | <b>총괄 대행: 투어메이커 (이재명 대표 010-9443-7881)</b>
+            </p>
+        </div>
+        
+        <table class="print-table">
+            <thead>
+                <tr>
+                    <th style="width: 7%;">일자</th>
+                    <th style="width: 10%;">구분</th>
+                    <th style="width: 63%;">상세일정 (간호사 상시 동행)</th>
+                    <th style="width: 20%;">식사 및 간식</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1일차 -->
+                <tr>
+                    <td class="center bold" rowspan="3">1일차<br>(월)</td>
+                    <td class="center">이동</td>
+                    <td>
+                        <ul>
+                            <li>지정 장소 집결 (태백 등) 및 전용 버스 탑승 (11:00 시대 원주공항 출발)</li>
+                            <li>제주공항 도착 (13:00~15:00 시대) 및 기사 미팅</li>
+                        </ul>
+                    </td>
+                    <td class="center" rowspan="3">
+                        <b>조식:</b> 이동중<br>
+                        <b>중식:</b> 돌솥밥+성게미역국<br>
+                        <b>석식:</b> 월드컵흑돼지<br>
+                        <span class="highlight-text">간식:</span> 오메기떡, 쥬스 등
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">관광</td>
+                    <td>
+                        <ul>
+                            <li><b>아이바가든</b> (난타공연 관람)</li>
+                            <li><b>더마파크</b> (16:00 기마공연 관람 - 무경사 코스)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">숙박</td>
+                    <td>
+                        <ul>
+                            <li><b>더그랜드섬오름 호텔</b> (4성급) 체크인 및 휴식 (2인1실)</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!-- 2일차 -->
+                <tr>
+                    <td class="center bold" rowspan="3">2일차<br>(화)</td>
+                    <td class="center">오전</td>
+                    <td>
+                        <ul>
+                            <li><b>럭셔리 요트투어</b> 탑승 (안전사고 유의)</li>
+                            <li><b>오설록 티뮤지엄</b> 녹차밭 관람 및 산책</li>
+                        </ul>
+                    </td>
+                    <td class="center" rowspan="3">
+                        <b>조식:</b> 호텔식<br>
+                        <b>중식:</b> 고기국수+돔베고기<br>
+                        <b>석식:</b> <span class="highlight-text">동해미락(회정식)</span><br>
+                        <span class="highlight-text">간식:</span> 녹차아이스크림 등
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">오후</td>
+                    <td>
+                        <ul>
+                            <li><b>휴애리 자연생활공원</b> 산책 (중간 더클리프 카페 휴식)</li>
+                            <li><b>서귀포 올레시장</b> 전통시장 관람</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">숙박</td>
+                    <td>
+                        <ul>
+                            <li><b>더그랜드섬오름 호텔</b> 연박 휴식</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!-- 3일차 -->
+                <tr>
+                    <td class="center bold" rowspan="4">3일차<br>(수)</td>
+                    <td class="center">오전</td>
+                    <td>
+                        <ul>
+                            <li><b>우도</b> 해양도립공원 (성산항 선박 탑승, 섬내 버스투어)</li>
+                        </ul>
+                    </td>
+                    <td class="center" rowspan="4">
+                        <b>조식:</b> 호텔식<br>
+                        <b>중식:</b> 해물전골<br>
+                        <b>석식:</b> 화목원정식+갈치<br>
+                        <span class="highlight-text">간식:</span> 우도땅콩아이스크림
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">오후</td>
+                    <td>
+                        <ul>
+                            <li><b>스카이워터쇼</b> (수중 다이빙 쇼 관람)</li>
+                            <li><b>에코랜드</b> (곶자왈 궤도열차 탑승)</li>
+                        </ul>
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="center">케어</td>
+                    <td>
+                        <ul>
+                            <li><b>한라수목원 인근 족욕 체험</b> (피로회복)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">숙박</td>
+                    <td>
+                        <ul>
+                            <li><b>호텔 리젠트마린</b> (제주시 4성급) 체크인</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                 <!-- 4일차 -->
+                 <tr>
+                    <td class="center bold" rowspan="3">4일차<br>(목)</td>
+                    <td class="center">오전</td>
+                    <td>
+                        <ul>
+                            <li><b>제주 돌문화공원</b> (숲속 전기차 탑승 관람)</li>
+                            <li><b>농수산 쇼핑센터</b> 방문 (특산물 쇼핑)</li>
+                        </ul>
+                    </td>
+                    <td class="center" rowspan="3">
+                        <b>조식:</b> 호텔식<br>
+                        <b>중식:</b> 제공안됨(공항)<br>
+                        <b>석식:</b> 치악기사식당<br>
+                        <span class="highlight-text">간식:</span> 감귤타르트/과즐
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">공항</td>
+                    <td>
+                        <ul>
+                            <li>13:00~15:00 시대 제주공항 도착 및 탑승수속 / 출발</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">도착</td>
+                    <td>
+                        <ul>
+                            <li>원주공항 도착 -> 치악기사식당 석식 -> 목적지 도착 해산</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div style="font-size: 9pt; color: #555;">
+                ※ 본 일정표는 과업지시서를 철저히 준수하여 기획되었으며, 전 일정 1년 이상 경력 간호사가 동행합니다.
+            </div>
+            <div>
+                <!-- 인쇄용 로고 -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="투어메이커 로고" style="height: 20px;">
+            </div>
+        </div>
+    </div>
+    <!-- 🖨️ 인쇄 전용 영역 끝 -->
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Tab Switching Logic
+        function showTab(tabId, btn) {
+            // Hide all contents
+            document.querySelectorAll('.schedule-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            // Show selected content
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            // Reset all buttons
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active');
+                b.classList.add('text-slate-500');
+            });
+            // Activate clicked button
+            btn.classList.add('active');
+            btn.classList.remove('text-slate-500');
+        }
+
+        // Video Play Logic
+        function playVideo(element, videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.title = "YouTube Video";
+            iframe.className = "w-full h-full";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            
+            element.innerHTML = '';
+            element.appendChild(iframe);
+            element.classList.remove('cursor-pointer', 'group');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // D-Day Counter (1차: 2026-05-11 기준)
+            const dDayBadge = document.getElementById('d-day-badge');
+            const targetDate = new Date('2026-05-11T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            const days = Math.ceil(distance / (1000 * 60 * 60 * 24));
+            
+            if (days > 0) {
+                dDayBadge.innerText = `1차 출발 D-${days}`;
+            } else if (days <= 0 && days >= -3) {
+                dDayBadge.innerText = `1차 행사 진행중`;
+                dDayBadge.classList.replace('bg-emerald-600', 'bg-blue-600');
+            } else {
+                dDayBadge.innerText = `행사 준비 완료`;
+                dDayBadge.classList.replace('bg-emerald-600', 'bg-slate-600');
+            }
+
+            // Auto-save Memo (Key 변경)
+            const memoArea = document.getElementById('travel-memo');
+            const saveStatus = document.getElementById('save-status');
+            
+            const savedMemo = localStorage.getItem('jeju_memo_kangwon_2026');
+            if (savedMemo) {
+                memoArea.value = savedMemo;
+            }
+
+            memoArea.addEventListener('input', function() {
+                localStorage.setItem('jeju_memo_kangwon_2026', this.value);
+                saveStatus.innerText = "저장됨 " + new Date().toLocaleTimeString();
+                saveStatus.classList.add('text-emerald-600');
+                setTimeout(() => saveStatus.classList.remove('text-emerald-600'), 1000);
+            });
+
+            // Scroll Spy
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'text-emerald-700', 'border-emerald-700');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active', 'text-emerald-700', 'border-emerald-700');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.15 });
+            
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
